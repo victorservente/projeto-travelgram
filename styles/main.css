@@ -1,13 +1,26 @@
 main {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-block: 24px;
-  /* padding-inline:32px; */
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  justify-content: center;
 }
 
 main img{
-  width: 286px;
-  height: 286px;
+  width: 100%;
+  max-width: 17.875rem;
+  aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+@media (min-width: 80em) {
+  main {
+    justify-content: center; 
+  }
+
+  main img {
+    width: calc((100% - 4.5rem) / 4); 
+    max-width: none;
+  }
 }
